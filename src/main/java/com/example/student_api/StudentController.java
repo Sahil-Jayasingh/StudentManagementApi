@@ -17,7 +17,7 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    public Student addStudent(@RequestBody Student student) {
+    public Student addStudent(@Valid @RequestBody Student student) {
         return repository.save(student);
     }
 
@@ -28,7 +28,7 @@ public class StudentController {
     }
 
     @PutMapping("/students/{id}")
-    public Student updateStudent(@PathVariable Long id, @RequestBody Student updated) {
+    public Student updateStudent(@PathVariable Long id,@Valid @RequestBody Student updated) {
         updated.setId(id);
         return repository.save(updated);
     }
