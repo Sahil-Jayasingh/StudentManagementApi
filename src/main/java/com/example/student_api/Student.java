@@ -11,11 +11,15 @@ public class Student {
     private Long id;
     private String dept;
     private String name;
+    @NotBlank(message="Must add the email")
+    private String mail;
 
     public Long getId() { return id; }
     public String getName() { return name; }
     public String getDept() { return dept; }
+    public String getmail() { return mail; }
     public void setId(Long id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setDept(String dept) { this.dept = dept; }
+    public void setmail(Long mail) { this.mail = mail; }
 }
