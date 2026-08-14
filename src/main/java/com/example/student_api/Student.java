@@ -1,6 +1,6 @@
 package com.example.student_api;
-
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "students")
